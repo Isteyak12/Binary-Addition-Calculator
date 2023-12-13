@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Binary Addition and Conversion</title>
+</head>
+<body>
+    <h1>Binary Addition and Conversion</h1>
+    <form action="/convert" method="post">
+        <label for="binary_input1">Enter 8-bit Binary Number 1:</label>
+        <input type="text" id="binary_input1" name="binary_input1" maxlength="8">
+        <br>
+        <label for="binary_input2">Enter 8-bit Binary Number 2:</label>
+        <input type="text" id="binary_input2" name="binary_input2" maxlength="8">
+        <br>
+        <input type="submit" value="Add and Convert">
+    </form>
+    {% if decimal_output1 %}
+        <p>Decimal Equivalent of Binary 1: {{ decimal_output1 }}</p>
+    {% endif %}
+    {% if decimal_output2 %}
+        <p>Decimal Equivalent of Binary 2: {{ decimal_output2 }}</p>
+    {% endif %}
+    {% if addition_result %}
+        <p>Addition Result (Decimal): {{ addition_result }}</p>
+    {% endif %}
+    {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
+</body>
+</html>
